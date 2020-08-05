@@ -12,10 +12,12 @@ const TeacherItem: React.FC<TeacherItemProps> = (props) => {
     return (
         <article className="teacher-item">
         <header>
-            <img src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png" alt=""/>
             <div>
-                <strong>Victor Giovannoni</strong>
-                <span>Computação</span>
+                <img src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png" alt=""/>
+                <div>
+                    <strong>Victor Giovannoni</strong>
+                    <span>Computação</span>
+                </div>
             </div>
         </header>
         <p>

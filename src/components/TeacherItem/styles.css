@@ -14,11 +14,21 @@
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .teacher-item header div {
     margin-left: 2.4rem;
+    display: flex;
+    align-items: center;
 }
+
+.teacher-item header div div {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+}
+
 
 .teacher-item header div strong {
     font: 700 2.4rem Archivo;
@@ -33,7 +43,7 @@
 }
 
 .teacher-item > p {
-    padding: 0.2rem;
+    padding: 0 3.2rem;
     font-size: 1.6rem;
     line-height: 2.8rem;
 }
