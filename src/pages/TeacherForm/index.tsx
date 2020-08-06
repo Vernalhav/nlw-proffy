@@ -1,4 +1,5 @@
 import React, {useState, FormEvent} from 'react';
+import { useHistory } from 'react-router-dom';
 
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
@@ -30,6 +31,8 @@ function TeacherForm() {
         { week_day: 0, from: '', to: '' }
     ]);
 
+    const history = useHistory();
+
     function handleClassCreation(e: FormEvent){
         e.preventDefault();
 
@@ -43,6 +46,7 @@ function TeacherForm() {
             schedule: scheduleItems
         }).then(()=>{
             alert('Cadastro realizado com sucesso!');
+            history.push('/');
         }).catch(()=>{
             alert('Erro no cadastro');
         });
