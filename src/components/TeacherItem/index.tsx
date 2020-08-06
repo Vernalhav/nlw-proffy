@@ -4,29 +4,36 @@ import wppIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-interface TeacherItemProps {
-    
+
+export interface Teacher {
+    name: string,
+    avatar: string,
+    bio: string,
+    cost: number,
+    id: number,
+    subject: string,
+    whatsapp: string
 }
 
-const TeacherItem: React.FC<TeacherItemProps> = (props) => {
+interface TeacherItemProps {
+    teacher: Teacher
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
     return (
         <article className="teacher-item">
         <header>
             <div>
-                <img src="https://www.pngitem.com/pimgs/m/30-307416_profile-icon-png-image-free-download-searchpng-employee.png" alt=""/>
+                <img src={teacher.avatar} alt={teacher.name}/>
                 <div>
-                    <strong>Victor Giovannoni</strong>
-                    <span>Computação</span>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
                 </div>
             </div>
         </header>
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br/>
-            Facilis temporibus quas eos voluptates omnis recusandae perspiciatis autem, <br/>
-            consectetur deserunt placeat ipsa unde. Aliquam ducimus atque distinctio libero quo quibusdam ut!
-        </p>
+        <p> {teacher.bio} </p>
         <footer>
-            <p>Preço/hora: <strong>R$50,00</strong></p>
+            <p>Preço/hora: <strong>R$ {teacher.cost}</strong></p>
             <button type="button">
                 <img src={wppIcon} alt="ícone Whatsapp"/>
                 Entrar em contato.
