@@ -33,7 +33,7 @@ function TeacherForm() {
     function handleClassCreation(e: FormEvent){
         e.preventDefault();
 
-        api.post('', {
+        api.post('/classes', {
             name,
             avatar,
             bio,
@@ -142,7 +142,7 @@ function TeacherForm() {
 
                         { scheduleItems.map((scheduleItem: ScheduleItem, i: number) => {
                             return (
-                                <div className="schedule-item" key={scheduleItem.week_day}>
+                                <div className="schedule-item">
                                     <Select
                                         name="week_day"
                                         label="Dia da semana"
